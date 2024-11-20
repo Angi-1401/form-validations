@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation with JS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="flex flex-col items-center justify-center h-screen bg-white">
+    <h1 class="text-2xl text-gray-900 text-center font-bold mb-6">
+      I'm a form<br />
+      <span class="text-sm">Pls, follow the rules 👉👈</span>
+    </h1>
+    <main class="max-w-4xl p-8 rounded-lg shadow-md">
+      <form action="#" id="form" class="w-full">
+        <!-- First Row: First Name and Last Name -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label
+              for="first-name"
+              class="block mb-2 text-sm font-medium text-gray-900">
+              First Name
+            </label>
+            <input
+              type="text"
+              id="first-name"
+              placeholder="Enter your first name"
+              class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+          </div>
+          <div>
+            <label
+              for="last-name"
+              class="block mb-2 text-sm font-medium text-gray-900">
+              Last Name
+            </label>
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Enter your last name"
+              class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+          </div>
+          <div class="col-span-2">
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              First and last name can only contain letters and spaces
+            </p>
+          </div>
+        </div>
+        <!-- Second Row: Email -->
+        <div class="grid grid-cols-1 gap-4 mb-4">
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+          </div>
+          <div class="col-span-2">
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Email must be a valid address
+            </p>
+          </div>
+        </div>
+        <!-- Third Row: Password and Confirm Password -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label
+              for="password"
+              class="block mb-2 text-sm font-medium text-gray-900">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+          </div>
+          <div>
+            <label
+              for="password2"
+              class="block mb-2 text-sm font-medium text-gray-900">
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="password2"
+              placeholder="Confirm your password"
+              class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+          </div>
+          <div class="col-span-2">
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Password must contain, at least, 1 lowercase letter
+            </p>
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Password must contain, at least, 1 uppercase letter
+            </p>
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Password must contain, at least, 1 number
+            </p>
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Password must contain, at least, 1 special character
+            </p>
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Password must contain, at least, 8 characters
+            </p>
+            <p class="text-sm text-red-500 font-medium validation-msg">
+              <i class="fa-solid fa-xmark"></i>
+              Both passwords must match
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <input
+            type="submit"
+            value="Submit"
+            class="py-2 px-4 text-white font-bold rounded bg-blue-500 hover:bg-blue-700 hover:cursor-pointer" />
+        </div>
+      </form>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/c640c833fe.js"
+      crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
